@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+    postgres:
+        environment:
+          - POSTGRES_USER=root
+          - POSTGRES_PASSWORD=root
+          - POSTGRES_DB=sellers_portal
+        ports:
+          - '40005:5432'
+
+    webserver:
+        ports:
+            - '40001:80'

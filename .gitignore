@@ -1,4 +1,3 @@
-
 ###> symfony/framework-bundle ###
 /.env.local
 /.env.local.php
@@ -8,3 +7,9 @@
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
+
+###> Docker файлы ###
+docker-compose.local.yml
+docker/nginx/logs
+docker/postgresql_data
+###< Docker файлы ###
