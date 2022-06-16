@@ -13,3 +13,9 @@ docker-compose.local.yml
 docker/nginx/logs
 docker/postgresql_data
 ###< Docker файлы ###
+###> symfony/webpack-encore-bundle ###
+/node_modules/
+/public/build/
+npm-debug.log
+yarn-error.log
+###< symfony/webpack-encore-bundle ###

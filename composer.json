@@ -12,9 +12,8 @@
         "symfony/flex": "^2",
         "symfony/framework-bundle": "*",
         "symfony/runtime": "*",
+        "symfony/webpack-encore-bundle": "^1.14",
         "symfony/yaml": "*"
-    },
-    "require-dev": {
     },
     "config": {
         "allow-plugins": {
