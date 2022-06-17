@@ -14,20 +14,15 @@
       </div>
       <div id="navbarMenu" class="navbar-menu">
         <div class="navbar-end">
-          <a class="navbar-item is-active">Home</a>
-          <a class="navbar-item">Examples</a>
-          <a class="navbar-item">Features</a>
-          <a class="navbar-item">Team</a>
-          <a class="navbar-item">Archives</a>
-          <a class="navbar-item">Help</a>
+          <a class="navbar-item is-active">Главная</a>
+          <a class="navbar-item">Контакты</a>
           <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link">Account</a>
+            <a class="navbar-link">buk2018irinam@gmail.com</a>
             <div class="navbar-dropdown">
-              <a class="navbar-item">Dashboard</a>
-              <a class="navbar-item">Profile</a>
-              <a class="navbar-item">Settings</a>
+              <a class="navbar-item">Личный кабинет</a>
+              <a class="navbar-item">Настройки профиля</a>
               <hr class="navbar-divider">
-              <div class="navbar-item">Logout</div>
+              <div class="navbar-item">Выйти</div>
             </div>
           </div>
         </div>
