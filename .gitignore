@@ -19,3 +19,10 @@ docker/postgresql_data
 npm-debug.log
 yarn-error.log
 ###< symfony/webpack-encore-bundle ###
+
+###> Для тестов ###
+src/Controller/TestController.php
+###< Для тестов ###
+###> lexik/jwt-authentication-bundle ###
+/config/jwt/*.pem
+###< lexik/jwt-authentication-bundle ###
