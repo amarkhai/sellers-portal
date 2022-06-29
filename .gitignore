@@ -10,6 +10,7 @@
 
 ###> Docker файлы ###
 docker-compose.local.yml
+docker-compose.override.yml
 docker/nginx/logs
 docker/postgresql_data
 ###< Docker файлы ###
