@@ -46,16 +46,3 @@ app-shell-stage:
 	$(DC_STAGE) exec app bash
 app-shell-prod:
 	$(DC_PROD) exec app bash
-
-tests@run:
-	OPCACHE_TEST=_test $(DC_DEV) exec app $(PHPUNIT)
-
-bump_version:
-	sed -i "s/APP_VERSION=.*/APP_VERSION=$(VERSION)/" .env
-	sed -i "s/\"version\"\:\ \".*\",/\"version\"\:\ \"$(VERSION)\",/" composer.json
-	sed -i "s/TAG=.*/TAG=$(VERSION)/" deploy/make.sh
-	git add .env composer.json docker-compose.yml deploy/make.sh
-	git commit -m"Version $(VERSION)"
-	git tag -a "$(VERSION)" -m"$(VERSION)"
-	git push origin master --tags
-	cd deploy; PROJECT="company/batch" bash make.sh

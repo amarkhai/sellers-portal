@@ -1,0 +1,4 @@
+controllers:
+    resource: ../../src/API/Admin
+    type: attribute
+    prefix: '/admin'
