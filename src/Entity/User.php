@@ -18,6 +18,14 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public const ROLE_FREE_CLIENT = 'ROLE_FREE_CLIENT';
     public const ROLE_USER = 'ROLE_USER';
 
+    public const ROLES = [
+        self::ROLE_SUPER_ADMIN,
+        self::ROLE_ADMIN,
+        self::ROLE_PAID_CLIENT,
+        self::ROLE_FREE_CLIENT,
+        self::ROLE_USER,
+    ];
+
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
@@ -77,6 +85,16 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setRoles(array $roles): self
     {
         $this->roles = $roles;
+
+        return $this;
+    }
+
+    public function addRole(string $role): self
+    {
+        if (!\in_array($role, self::ROLES)) {
+            throw new \RuntimeException('Некорректная роль ' . $role);
+        }
+        $this->roles = \array_unique(\array_merge($this->roles, [$role]));
 
         return $this;
     }
