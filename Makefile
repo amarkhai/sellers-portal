@@ -46,3 +46,7 @@ app-shell-stage:
 	$(DC_STAGE) exec app bash
 app-shell-prod:
 	$(DC_PROD) exec app bash
+check-dev:
+	$(DC_DEV) exec php vendor/bin/psalm
+	$(DC_DEV) exec php vendor/bin/phpstan analyze src
+	$(DC_DEV) exec php vendor/bin/php-cs-fixer fix src
