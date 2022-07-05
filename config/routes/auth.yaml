@@ -1,0 +1,8 @@
+controllers:
+  resource: ../../src/API/Auth
+  type: attribute
+  prefix: '/api/auth'
+
+
+auth.login_check:
+  path: /api/auth/login_check

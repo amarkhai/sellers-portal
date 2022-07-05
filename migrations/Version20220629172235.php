@@ -15,6 +15,10 @@ final class Version20220629172235 extends AbstractMigration
     public function getDescription(): string
     {
         return '';
+//        Продолжаем изучать Security:
+//        https://symfony.com/doc/current/security
+//        Добавить роут для получения всех пользователей (только для админов (РОЛИ!))
+//        Сделать регистрацию пользователя
     }
 
     public function up(Schema $schema): void
