@@ -12,3 +12,21 @@ services:
     webserver:
         ports:
             - '40001:80'
+
+# если нужна БД для тестов
+    db_test:
+        image: 'postgres'
+        tmpfs: /var/lib/postgresql/data
+        environment:
+            - POSTGRES_USER=root
+            - POSTGRES_PASSWORD=root
+            - POSTGRES_DB=db_test
+
+# если нужен обработчик очередей
+    consumer:
+        build: docker/php-fpm/prod
+        restart: on-failure
+        working_dir: /application
+        volumes:
+            - '.:/application'
+        entrypoint: php /application/bin/console messenger:consume bank_application_async --limit=1000 --time-limit=3600 -vv
