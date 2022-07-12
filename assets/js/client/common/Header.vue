@@ -1,6 +1,10 @@
 <script>
-export default {
+import ClientBadge from "./ClientBadge";
 
+export default {
+  components: {
+    ClientBadge
+  }
 }
 </script>
 <template>
@@ -19,17 +23,9 @@ export default {
       </div>
       <div id="navbarMenu" class="navbar-menu">
         <div class="navbar-end">
-          <router-link class="navbar-item" to="/">Главная</router-link>
-          <router-link class="navbar-item" to="/about">Контакты</router-link>
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link">buk2018irinam@gmail.com</a>
-            <div class="navbar-dropdown">
-              <a class="navbar-item">Личный кабинет</a>
-              <a class="navbar-item">Настройки профиля</a>
-              <hr class="navbar-divider">
-              <div class="navbar-item">Выйти</div>
-            </div>
-          </div>
+          <router-link class="navbar-item" to="/">Main</router-link>
+          <router-link class="navbar-item" to="/about">About</router-link>
+          <client-badge></client-badge>
         </div>
       </div>
     </div>

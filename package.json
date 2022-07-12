@@ -16,6 +16,8 @@
         "build": "encore production --progress"
     },
     "dependencies": {
+        "@websanova/vue-auth": "^4.1.13",
+        "axios": "^0.27.2",
         "bulma": "^0.9.4",
         "sass": "^1.52.3",
         "sass-loader": "^13.0.0",
